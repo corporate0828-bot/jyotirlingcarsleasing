@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jyotirling Mobility | Car Rental Services</title>
+<meta name="description" content="Jyotirling Mobility provides corporate, industrial, government, monthly fixed-basis, personal, local and outstation car rental services with professional drivers.">
+<style>
+:root{
+  --navy:#10243e;
+  --blue:#1f5f8b;
+  --gold:#c79a3b;
+  --light:#f5f7fa;
+  --text:#243140;
+  --muted:#657383;
+  --white:#fff;
+  --border:#e5e9ee;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{background:var(--navy);color:#fff;font-size:14px}
+.topbar .container{display:flex;justify-content:flex-end;gap:24px;padding:8px 0}
+header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:76px}
+.logo{font-size:25px;font-weight:800;letter-spacing:.5px;color:var(--navy)}
+.logo span{display:block;font-size:11px;letter-spacing:2px;color:var(--gold);margin-top:-4px}
+nav{display:flex;gap:22px;align-items:center}
+nav a{font-size:14px;font-weight:700;color:#35485b}
+nav a:hover{color:var(--blue)}
+.btn{display:inline-block;padding:13px 21px;border-radius:7px;font-weight:800;font-size:14px;transition:.2s}
+.btn-primary{background:var(--gold);color:#172334}
+.btn-primary:hover{filter:brightness(.95);transform:translateY(-1px)}
+.btn-outline{border:1px solid #fff;color:#fff}
+.hero{background:linear-gradient(120deg,rgba(16,36,62,.96),rgba(31,95,139,.88)),url('') center/cover;padding:92px 0 85px;color:#fff}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.3);padding:7px 12px;border-radius:30px;font-size:12px;letter-spacing:.6px;margin-bottom:20px}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.08;margin-bottom:18px}
+.hero h1 span{color:#e8c46e}
+.hero p{font-size:18px;color:#e9eef4;max-width:690px;margin-bottom:26px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{background:#fff;color:var(--text);border-radius:14px;padding:28px;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.hero-card h3{color:var(--navy);font-size:20px;margin-bottom:8px}
+.hero-card p{color:var(--muted);font-size:14px;margin-bottom:18px}
+.hero-card .quick{display:grid;gap:10px}
+.quick a{padding:13px 14px;border:1px solid var(--border);border-radius:8px;font-weight:700;font-size:14px}
+.quick a:hover{border-color:var(--gold)}
+section{padding:78px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+.section-head .eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;font-size:12px;text-transform:uppercase}
+.section-head h2{font-size:34px;color:var(--navy);margin:7px 0 10px}
+.section-head p{color:var(--muted)}
+.stats{background:var(--light)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:25px;text-align:center}
+.stat strong{display:block;color:var(--navy);font-size:28px}
+.stat span{font-size:13px;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{border:1px solid var(--border);border-radius:12px;padding:27px;background:#fff}
+.service .icon{font-size:25px;margin-bottom:13px}
+.service h3{color:var(--navy);font-size:19px;margin-bottom:8px}
+.service p{color:var(--muted);font-size:14px;margin-bottom:17px}
+.service a{font-size:13px;font-weight:800;color:var(--blue)}
+.fleet{background:var(--light)}
+.fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.car{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.car-img{height:130px;background:linear-gradient(135deg,#dfe5ea,#f8fafb);display:flex;align-items:center;justify-content:center;color:#7c8995;font-weight:800;font-size:14px}
+.car-body{padding:18px}
+.car-body h3{font-size:17px;color:var(--navy)}
+.car-body p{font-size:12px;color:var(--muted)}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.why-box{background:var(--navy);color:#fff;border-radius:16px;padding:34px}
+.why-box h3{font-size:25px;margin-bottom:10px}
+.why-box p{color:#dbe4ee}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feature{padding:18px;border-bottom:1px solid var(--border)}
+.feature strong{display:block;color:var(--navy)}
+.feature span{font-size:13px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border:1px solid var(--border);border-radius:12px;padding:24px}
+.step .num{font-size:12px;color:var(--gold);font-weight:900;letter-spacing:2px}
+.step h3{color:var(--navy);margin:6px 0}
+.step p{font-size:13px;color:var(--muted)}
+.cta{background:var(--navy);color:#fff;text-align:center}
+.cta h2{font-size:36px;margin-bottom:10px}
+.cta p{color:#dbe4ee;max-width:720px;margin:0 auto 24px}
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px}
+.contact-card{background:var(--light);border-radius:14px;padding:30px}
+.contact-card h3{color:var(--navy);margin-bottom:17px}
+.contact-item{margin:14px 0}
+.contact-item strong{display:block;color:var(--navy)}
+.contact-item span{color:var(--muted);font-size:14px}
+form{border:1px solid var(--border);padding:30px;border-radius:14px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{font-size:12px;font-weight:800;color:var(--navy)}
+input,select,textarea{width:100%;padding:12px;margin-top:6px;border:1px solid #d7dde4;border-radius:7px;font:inherit;font-size:14px}
+textarea{min-height:120px;resize:vertical}
+.full{grid-column:1/-1}
+footer{background:#0b1a2d;color:#cbd5df;padding:28px 0}
+.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}
+footer strong{color:#fff}
+footer small{color:#93a1b0}
+.mobile-menu{display:none}
+@media(max-width:900px){
+ nav{display:none}.mobile-menu{display:block;border:0;background:none;font-size:25px;color:var(--navy)}
+ .hero-grid,.why,.contact{grid-template-columns:1fr}
+ .stat-grid{grid-template-columns:repeat(2,1fr)}
+ .services{grid-template-columns:repeat(2,1fr)}
+ .fleet-grid{grid-template-columns:repeat(2,1fr)}
+ .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+ .topbar .container{justify-content:center;gap:10px;font-size:12px}
+ .hero{padding:65px 0}.hero-card{margin-top:10px}
+ section{padding:58px 0}
+ .stat-grid,.services,.fleet-grid,.steps,.features,.form-grid{grid-template-columns:1fr}
+ .section-head h2{font-size:29px}
+ .footer-row{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📞 7038340008</span>
+    <span>✉️ amolgole970@gmail.com</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">JYOTRLING<span>MOBILITY</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#fleet">Our Fleet</a>
+      <a href="#corporate">Corporate & Industrial</a>
+      <a href="#about">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="#quote">Get a Quote</a>
+    </nav>
+    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">CORPORATE • INDUSTRIAL • GOVERNMENT • INDIVIDUAL</div>
+      <h1>Car Rental Services for <span>Everyone.</span></h1>
+      <p>Reliable cars and professional drivers for companies, industries, government requirements, businesses, families and individuals — from local trips to long-term monthly contracts.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#quote">GET A QUOTATION</a>
+        <a class="btn btn-outline" href="https://wa.me/917038340008?text=Hello%20Jyotirling%20Mobility%2C%20I%20would%20like%20to%20enquire%20about%20car%20rental." target="_blank">WHATSAPP NOW</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>What do you need?</h3>
+      <p>Tell us your requirement and we will suggest a suitable vehicle solution.</p>
+      <div class="quick">
+        <a href="#corporate">🏢 Company / Corporate Hiring →</a>
+        <a href="#corporate">🏭 Industrial Requirement →</a>
+        <a href="#services">📅 Monthly / Fixed Basis →</a>
+        <a href="#services">👨‍👩‍👧 Personal / Family →</a>
+        <a href="#services">📍 Local / Outstation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stat-grid">
+    <div class="stat"><strong>11+</strong><span>Years of Experience</span></div>
+    <div class="stat"><strong>Flexible</strong><span>Rental Options</span></div>
+    <div class="stat"><strong>Pro</strong><span>Professional Drivers</span></div>
+    <div class="stat"><strong>Direct</strong><span>Quick Enquiry Support</span></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Services</div>
+      <h2>One Rental Partner for Different Needs</h2>
+      <p>Whether the requirement is for one day, regular local use or a long-term monthly contract, we provide practical vehicle solutions.</p>
+    </div>
+    <div class="services">
+      <article class="service"><div class="icon">🏢</div><h3>Corporate Car Hiring</h3><p>Cars with professional drivers for companies, HR/Admin and transport requirements.</p><a href="#quote">GET CORPORATE QUOTE →</a></article>
+      <article class="service"><div class="icon">📅</div><h3>Monthly / Fixed Basis</h3><p>Dedicated vehicles for monthly, fixed-basis and long-term requirements.</p><a href="#quote">GET A QUOTE →</a></article>
+      <article class="service"><div class="icon">🏛️</div><h3>Government & Institutional</h3><p>Vehicle solutions for official, institutional and government requirements.</p><a href="#quote">CONTACT US →</a></article>
+      <article class="service"><div class="icon">🏭</div><h3>Industrial Car Hiring</h3><p>Reliable vehicles for factories, industrial units, staff, executives and business needs.</p><a href="#quote">GET INDUSTRIAL QUOTE →</a></article>
+      <article class="service"><div class="icon">👨‍👩‍👧</div><h3>Personal & Family Rental</h3><p>Comfortable cars with professional drivers for personal and family requirements.</p><a href="#quote">GET A QUOTE →</a></article>
+      <article class="service"><div class="icon">🛣️</div><h3>Local & Outstation</h3><p>Cars for local full-day requirements, business travel and outstation journeys.</p><a href="#quote">ENQUIRE NOW →</a></article>
+      <article class="service"><div class="icon">🎉</div><h3>Wedding & Events</h3><p>Vehicle arrangements for weddings, functions, events and special occasions.</p><a href="#quote">ENQUIRE NOW →</a></article>
+      <article class="service"><div class="icon">🚘</div><h3>Business Travel</h3><p>Professional vehicle support for meetings, visits, executives and business travel.</p><a href="#quote">ENQUIRE NOW →</a></article>
+      <article class="service"><div class="icon">🤝</div><h3>Dedicated Driver Service</h3><p>Professional driver support according to your vehicle rental requirement.</p><a href="#quote">ENQUIRE NOW →</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="fleet" class="fleet">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Fleet</div>
+      <h2>Vehicles for Different Requirements</h2>
+      <p>Our current fleet includes SUV, C-SUV, sedan and hatchback options. Vehicle availability is subject to requirement and schedule.</p>
+    </div>
+    <div class="fleet-grid">
+      <article class="car"><div class="car-img">CAR PHOTO</div><div class="car-body"><h3>Tata Sierra</h3><p>SUV / Premium requirement</p></div></article>
+      <article class="car"><div class="car-img">CAR PHOTO</div><div class="car-body"><h3>Toyota Innova</h3><p>SUV / Family / Corporate</p></div></article>
+      <article class="car"><div class="car-img">CAR PHOTO</div><div class="car-body"><h3>Maruti Ertiga</h3><p>MUV / Corporate / Family</p></div></article>
+      <article class="car"><div class="car-img">CAR PHOTO</div><div class="car-body"><h3>Maruti Swift Dzire</h3><p>Sedan / Business / Local</p></div></article>
+      <article class="car"><div class="car-img">CAR PHOTO</div><div class="car-body"><h3>Hyundai Aura</h3><p>Sedan / Local / Business</p></div></article>
+      <article class="car"><div class="car-img">CAR PHOTO</div><div class="car-body"><h3>Maruti Fronx</h3><p>C-SUV / Personal / Corporate</p></div></article>
+      <article class="car"><div class="car-img">CAR PHOTO</div><div class="car-body"><h3>Maruti WagonR</h3><p>Hatchback / Economical</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="corporate">
+  <div class="container why">
+    <div class="why-box">
+      <h3>Corporate & Industrial Car Hiring</h3>
+      <p>Need one car or multiple vehicles? Jyotirling Mobility can support small businesses, large companies, industrial units and official requirements with monthly, fixed-basis and requirement-based vehicle solutions.</p>
+      <br>
+      <a class="btn btn-primary" href="#quote">REQUEST CORPORATE / INDUSTRIAL QUOTE</a>
+    </div>
+    <div>
+      <div class="section-head" style="text-align:left;margin:0 0 20px">
+        <div class="eyebrow">Why Choose Us</div>
+        <h2>Simple Service. Clear Communication. Reliable Vehicles.</h2>
+        <p>Our aim is to make car hiring easy for both business customers and individual customers.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><strong>✓ Professional Drivers</strong><span>Experienced and responsible driver support.</span></div>
+        <div class="feature"><strong>✓ Well-Maintained Cars</strong><span>Vehicles maintained for comfort and reliability.</span></div>
+        <div class="feature"><strong>✓ Competitive Rates</strong><span>Requirement-based and transparent quotations.</span></div>
+        <div class="feature"><strong>✓ Flexible Contracts</strong><span>Daily, monthly, fixed-basis and long-term options.</span></div>
+        <div class="feature"><strong>✓ Small to Large Requirements</strong><span>Support for individuals, businesses, industries and companies.</span></div>
+        <div class="feature"><strong>✓ Quick Response</strong><span>Easy enquiry through call, WhatsApp or website.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">How It Works</div>
+      <h2>Getting a Car is Simple</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Share Requirement</h3><p>Tell us the car type, dates, location and duration.</p></div>
+      <div class="step"><div class="num">02</div><h3>Get a Quote</h3><p>We provide a suitable vehicle option and quotation.</p></div>
+      <div class="step"><div class="num">03</div><h3>Confirm</h3><p>Confirm the requirement and vehicle arrangement.</p></div>
+      <div class="step"><div class="num">04</div><h3>Get Service</h3><p>Vehicle and professional driver are arranged as agreed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Need a Car with a Professional Driver?</h2>
+    <p>From an individual trip to a long-term company or industrial requirement, tell us what you need. We will help you find a suitable car rental solution.</p>
+    <a class="btn btn-primary" href="#quote">REQUEST A QUOTATION</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact">
+    <div class="contact-card">
+      <h3>Contact Jyotirling Mobility</h3>
+      <div class="contact-item"><strong>📞 Call / WhatsApp</strong><span>7038340008</span></div>
+      <div class="contact-item"><strong>✉️ Email</strong><span>amolgole970@gmail.com</span></div>
+      <div class="contact-item"><strong>📍 Address</strong><span>Koparkhairane, Sector 18, Navi Mumbai</span></div>
+      <div class="contact-item"><strong>Services</strong><span>Corporate • Industrial • Government • Monthly • Personal • Local • Outstation</span></div>
+    </div>
+    <form id="quote" onsubmit="sendWhatsApp(event)">
+      <h3 style="color:#10243e;margin-bottom:18px">Request a Quotation</h3>
+      <div class="form-grid">
+        <div><label>Name</label><input id="name" required></div>
+        <div><label>Mobile Number</label><input id="mobile" type="tel" required></div>
+        <div><label>Company / Organisation (Optional)</label><input id="company"></div>
+        <div><label>Service Required</label>
+          <select id="service">
+            <option>Corporate Car Hiring</option>
+            <option>Industrial Car Hiring</option>
+            <option>Monthly / Fixed Basis</option>
+            <option>Government / Institutional</option>
+            <option>Personal / Family</option>
+            <option>Local Rental</option>
+            <option>Outstation Rental</option>
+            <option>Wedding / Event</option>
+          </select>
+        </div>
+        <div><label>Car Required</label><input id="car" placeholder="e.g. Innova / Sedan / SUV"></div>
+        <div><label>Number of Cars</label><input id="cars" type="number" min="1" placeholder="1"></div>
+        <div><label>Required From</label><input id="date" type="date"></div>
+        <div><label>Duration / Basis</label><input id="duration" placeholder="Monthly / 2 days / etc."></div>
+        <div class="full"><label>Your Requirement</label><textarea id="message" placeholder="Tell us your pickup area, destination, timing or other requirement."></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit" style="border:0;cursor:pointer;width:100%">SEND ENQUIRY ON WHATSAPP</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div><strong>JYOTRLING MOBILITY</strong><br><small>Corporate & Personal Car Rental Solutions</small></div>
+    <small>© 2026 Jyotirling Mobility. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  const nav=document.querySelector('nav');
+  nav.style.display = nav.style.display==='flex' ? 'none' : 'flex';
+  nav.style.flexDirection='column';
+  nav.style.position='absolute';
+  nav.style.top='76px';
+  nav.style.right='4%';
+  nav.style.background='#fff';
+  nav.style.padding='18px';
+  nav.style.boxShadow='0 10px 30px rgba(0,0,0,.12)';
+}
+function sendWhatsApp(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const mobile=document.getElementById('mobile').value;
+  const company=document.getElementById('company').value;
+  const service=document.getElementById('service').value;
+  const car=document.getElementById('car').value;
+  const cars=document.getElementById('cars').value;
+  const date=document.getElementById('date').value;
+  const duration=document.getElementById('duration').value;
+  const message=document.getElementById('message').value;
+  const text=`Hello Jyotirling Mobility,%0A%0AQuotation Enquiry%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(mobile)}%0ACompany: ${encodeURIComponent(company||'N/A')}%0AService: ${encodeURIComponent(service)}%0ACar Required: ${encodeURIComponent(car||'Not specified')}%0ANumber of Cars: ${encodeURIComponent(cars||'1')}%0ARequired From: ${encodeURIComponent(date||'Not specified')}%0ADuration/Basis: ${encodeURIComponent(duration||'Not specified')}%0ARequirement: ${encodeURIComponent(message||'Not specified')}`;
+  window.open('https://wa.me/917038340008?text='+text,'_blank');
+}
+</script>
+</body>
+</html>

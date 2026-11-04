@@ -1,0 +1,6 @@
+{
+  "name": "Jyotirling Mobility - Car Rental & Chauffeur Services",
+  "description": "Corporate, industrial, monthly fixed-basis, local and outstation car rental services with professional chauffeurs in Navi Mumbai, Mumbai, and Maharashtra.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,31 @@
+JYOTIRLING MOBILITY WEBSITE - GOOGLE FIREBASE HOSTING
+
+WHAT IS INCLUDED
+- index.html: Your website's front-end code (HTML, CSS and JavaScript).
+- firebase.json: Hosting configuration for Google Firebase Hosting.
+
+IMPORTANT
+This is currently a static website. The enquiry form opens WhatsApp and sends the visitor's details to your WhatsApp number. It does not currently save enquiries in a database or provide an admin login. A separate backend/database is not required for the current WhatsApp enquiry flow.
+
+PUBLISH USING GOOGLE FIREBASE HOSTING
+1. On a computer, extract this ZIP file into a folder.
+2. Install Node.js from https://nodejs.org/ if it is not already installed.
+3. Open Terminal / Command Prompt in the extracted folder.
+4. Install Firebase CLI:
+   npm install -g firebase-tools
+5. Sign in to Google:
+   firebase login
+6. Create a project in https://console.firebase.google.com/ (choose a unique project ID).
+7. In the website folder, run:
+   firebase init hosting
+   Choose: Use an existing project -> select your project.
+   Public directory: .
+   Configure as a single-page app: No
+   Set up automatic builds and deploys with GitHub: No
+   If asked to overwrite index.html, choose No.
+8. Publish:
+   firebase deploy --only hosting
+9. Firebase will show your live website address, usually https://YOUR-PROJECT-ID.web.app
+
+NOTE
+Do not upload this ZIP as-is into Google Sites. Firebase Hosting is Google's service for publishing a custom HTML website. Keep a backup of the original HTML file.
